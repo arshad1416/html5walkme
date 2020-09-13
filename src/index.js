@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
 import * as serviceWorker from './serviceWorker';
+import { I18nProvider, LOCALES} from './i18n';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <I18nProvider locale={LOCALES.ENGLISH}>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+  </I18nProvider>,
   document.getElementById('root')
 );
 
